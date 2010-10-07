@@ -11,3 +11,6 @@ includes[el_base] = "http://github.com/ergonlogic/Makefiles/raw/master/el_base.m
 projects[feature_server][type] = "profile"
 projects[feature_server][download][type] = "git"
 projects[feature_server][download][url] = "git://git.mig5.net/drupal/profiles/feature_server"
+
+; Missing dependency
+projects[] = strongarm
