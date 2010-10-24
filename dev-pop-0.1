@@ -1,0 +1,181 @@
+;****************************************
+; Description
+;****************************************
+
+; Drush make file for a Koumbit.org's production platform on Aegir.
+
+; Last updated on: 2010-10-20
+; Last updated by: J0nathan and Christopher modified by Marco
+
+;****************************************
+; General
+;****************************************
+
+; drush make API version
+api = "2"
+
+;****************************************
+; Core
+;****************************************
+
+core = "6.x"
+; include Pressflow core
+includes[pressflow] = "http://github.com/ergonlogic/Makefiles/raw/master/el_pressflow.make"
+
+
+;****************************************
+; Translations
+;****************************************
+
+; drush dl fr
+
+;****************************************
+; Profile
+;****************************************
+
+projects[ktbase][type] = "profile"
+projects[ktbase][download][type] = "git"
+projects[ktbase][download][url] = "git://git.koumbit.net/aegir_kt/base-profile-platform.git"
+projects[ktbase][download][branch] = "master"
+
+projects[campaigns][type] = "profile"
+projects[campaigns][download][type] = "git"
+projects[campaigns][download][url] = "git://git.koumbit.net/drupal/contrib/profiles/campaigns.git"
+projects[campaigns][download][branch] = "master"
+
+
+;****************************************
+; Modules from Drupal.org
+;****************************************
+
+projects[admin_menu][version] = "1.6"
+projects[admin_menu][subdir] = "contrib"
+
+projects[advanced_help][version] = "1.2"
+projects[advanced_help][subdir] = "contrib"
+
+projects[backup_migrate][version] = "2.2"
+projects[backup_migrate][subdir] = "contrib"
+
+projects[captcha][version] = "2.2"
+projects[captcha][subdir] = "contrib"
+
+projects[cck][version] = "2.8"
+projects[cck][subdir] = "contrib"
+
+projects[ctools][version] = "1.7"
+projects[ctools][subdir] = "contrib"
+
+projects[date][version] = "2.6"
+projects[date][subdir] = "contrib"
+
+projects[filefield][version] = "3.7"
+projects[filefield][subdir] = "contrib"
+
+projects[google_analytics][version] = "3.0"
+projects[google_analytics][subdir] = "contrib"
+
+projects[imageapi][version] = "1.8"
+projects[imageapi][subdir] = "contrib"
+
+projects[imagecache][version] = "2.0-beta10"
+projects[imagecache][subdir] = "contrib"
+
+projects[imagefield][version] = "3.7"
+projects[imagefield][subdir] = "contrib"
+
+projects[imce][version] = "1.4"
+projects[imce][subdir] = "contrib"
+
+projects[jquery_ui][version] = "1.4"
+projects[jquery_ui][subdir] = "contrib"
+
+projects[jquery_update][version] = "2.0-alpha1"
+projects[jquery_update][subdir] = "contrib"
+
+projects[libraries][version] = "1.0-alpha1"
+projects[libraries][subdir] = "contrib"
+
+projects[lightbox2][version] = "1.11"
+projects[lightbox2][subdir] = "contrib"
+
+projects[link][version] = "2.9"
+projects[link][subdir] = "contrib"
+
+projects[nodewords][version] = "1.11"
+projects[nodewords][subdir] = "contrib"
+
+projects[pathauto][version] = "1.5"
+projects[pathauto][subdir] = "contrib"
+
+projects[token][version] = "1.15"
+projects[token][subdir] = "contrib"
+
+projects[views][version] = "2.11"
+projects[views][subdir] = "contrib"
+
+projects[webform][version] = "3.2"
+projects[webform][subdir] = "contrib"
+
+projects[wysiwyg][version] = "2.1"
+projects[wysiwyg][subdir] = "contrib"
+
+projects[imce_wysiwyg][version] = "1.1"
+projects[imce_wysiwyg][subdir] = "contrib" 
+
+projects[adminrole][version] = "1.3"
+projects[adminrole][subdir] = "contrib"
+
+;****************************************
+; Themes from Drupal.org
+;****************************************
+
+projects[acquia_marina][version] = "3.0-beta1"
+
+projects[acquia_prosper][version] = "1.1"
+
+projects[acquia_slate][version] = "3.0-beta1"
+
+projects[adaptivetheme][version] = "2.2"
+
+projects[fusion][version] = "1.0"
+
+projects[marinelli][version] = "2.96"
+
+projects[pixture_reloaded][version] = "3.2"
+
+projects[rootcandy][version] = "1.8"
+
+projects[zen][version] = "2.0"
+
+projects[zeropoint][version] = "1.11"
+
+;****************************************
+; Libraries in sites/all/libraries
+;****************************************
+
+; CKEditor for the Drupal contrib modules "CKEditor" (ckeditor) and "Wysiwyg API" (wysiwyg).
+libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.1/ckeditor_3.4.1.tar.gz"
+libraries[ckeditor][directory_name] = "ckeditor"
+
+; TinyMCE for the Drupal contrib module "Wysiwyg API" (wysiwyg).
+libraries[tinymce][download][type] = "get"
+libraries[tinymce][download][url] = "http://downloads.sourceforge.net/project/tinymce/TinyMCE/3.3.9/tinymce_3_3_9.zip"
+libraries[tinymce][directory_name] = "tinymce"
+
+;****************************************
+; Libraries elsewhere
+;****************************************
+
+; jQuery UI 1.7.x for the Drupal contrib modules "jQuery UI" (jquery_ui) and "jQuery Update" (jquery_update).
+libraries[jquery_ui][download][type] = "get"
+libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery-ui-1.7.3.zip"
+libraries[jquery_ui][directory_name] = "jquery.ui"
+libraries[jquery_ui][destination] = "modules/contrib/jquery_ui"
+; ^--- Libraries API (feature request)
+;      http://drupal.org/node/489140
+
+;****************************************
+; End
+;****************************************
