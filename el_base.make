@@ -15,7 +15,7 @@ projects[] = diff
 projects[] = views
 
 ; include openid_relying
-includes[openid_relying] = "https://github.com/ergonlogic/Makefiles/raw/master/el_openid_relying.make"
+includes[openid_relying] = "https://github.com/ergonlogic/el_openid_relying/raw/master/el_openid_relying.make"
 
 ; dependencies
 projects[] = admin_menu
