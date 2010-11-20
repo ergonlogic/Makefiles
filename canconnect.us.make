@@ -7,7 +7,6 @@ projects[drupal][version] = 7.0-beta3
 
 ; modules
 
-projects[token][version] = 7.x-3.x-dev
 projects[views][version] = 7.x-3.x-dev
 projects[token][version] = 7.x-1.0-alpha3
 projects[pathauto][version] = 7.x-1.0-alpha2
