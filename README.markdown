@@ -3,7 +3,8 @@ I'm still trying to wrap my head fully around how to structure these repos prope
 I figure I can put 'vendor' platforms (core(PressFlow)+profile(ManagingNews)) here for now.
 
 Proposed structure for repos:
- * Vendor: X (i.e., Koumbit, Development Seed, Funny Monkey):
+
+* Vendor: X (i.e., Koumbit, Development Seed, Funny Monkey):
    * Platform makefiles (just includes of PressFlow core + profile .makes)
    * Profile makefiles (track HEAD, CURRENT from CVS/Git)
    * Features (?)
@@ -13,31 +14,37 @@ Proposed structure for repos:
    * Feature tweaks (features to enhance/override vendor features)
    * Custom features
    * Security settings features (PRIVATE)
+   * .dotfiles
+   * SQL dumps (?... PRIVATE)
+   * Puppet files (?... PRIVATE)
 
 So, this would look something like:
- - Vendors:
+
+- Vendors:
    - Development Seed:
-     - Platforms:
-       - Open Atrium CURRENT
-       - Managing News CURRENT
-       - ...
-     - Profiles:
-       - Open Atrium HEAD
-       - Open Atrium CURRENT
-       - Managing News HEAD
-       - Managing News CURRENT
-       - ...
+     - platform-OpenAtrium-CURRENT.make
+     - platform-ManagingNews-CURRENT.make
+     - profile-OpenAtrium-HEAD.make
+     - profile-OpenAtrium-CURRENT.make
+     - profile-ManagingNews-HEAD.make
+     - profile-ManagingNews-CURRENT.make
+     - ...
    - Funny Monkey:
-     - Platforms:
-       - VoiceBox CURRENT
-       - ...
-     - Profiles:
-       - VoiceBox HEAD
-       - VoiceBox CURRENT
-       - ...
+     - platform-VoiceBox-CURRENT.make
+     - profile-VoiceBox-HEAD.make
+     - profile-VoiceBox-CURRENT.make
+     - ...
+
+... or possibly in directories, but then filenames are potentially duplicated:
    - Koumbit:
      - Platforms:
        - Hostmaster CURRENT
+       - ...
+     - Profiles:
+       - kt_brochure
+       - ...
+     - Features:
+       - kt_bookmarks
        - ...
    - Phase II:
      - Platforms:
@@ -47,8 +54,9 @@ So, this would look something like:
    - Green Bee (Mig5):
      - Platforms:
        - Feature Server
+       - ...
    - Four Kitchens:
      - Platforms:
        - PressFlow
-
+       - ...
 
