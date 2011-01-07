@@ -7,4 +7,4 @@ includes[pressflow] = "http://github.com/ergonlogic/Makefiles/raw/master/el_pres
 ; get MN from managingnews.com
 
 projects[managingnews][download][type] = "post"
-projects[managingnews][download][url] = "http://managingnews.com/files/managingnews-1.1.zip"
+projects[managingnews][download][url] = "http://managingnews.com/files/managingnews-1.2.zip"
