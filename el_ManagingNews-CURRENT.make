@@ -9,4 +9,4 @@ includes[pressflow] = "http://github.com/ergonlogic/Makefiles/raw/master/el_pres
 projects[managingnews][type] = "profile"
 projects[managingnews][download][type] = "cvs"
 projects[managingnews][download][module] = "contributions/profiles/managingnews"
-projects[managingnews][download][revision] = "1.2"
+projects[managingnews][download][revision] = "DRUPAL-6--1-2"
