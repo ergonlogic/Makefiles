@@ -3,4 +3,7 @@ api = 2
 
 includes[pressflow] = "http://github.com/ergonlogic/Makefiles/raw/master/el_pressflow.make"
 
-includes[openenterprise] = "http://drupalcode.org/project/openenterprise.git/blob_plain/HEAD:/openenterprise.make"
+projects[openenterprise][type] = "profile"
+projects[openenterprise][download][type] = "git"
+projects[openenterprise][download][url] = "http://drupalcode.org/project/openenterprise.git]
+
